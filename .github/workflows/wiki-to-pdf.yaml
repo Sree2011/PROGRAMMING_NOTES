@@ -3,7 +3,7 @@ name: Convert Wiki to PDF
 on:
   push:
     branches:
-      - main  # Adjust this branch name as needed
+      - wiki  # Adjust this branch name as needed
 
 jobs:
   convert_via_pandoc:
