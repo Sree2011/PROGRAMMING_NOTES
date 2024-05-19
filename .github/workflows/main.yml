@@ -1,18 +1,29 @@
-            - name: Wiki Sync (fixed)
-  # You may pin to the exact commit or the version.
-  # uses: LillyWho/ghaction-wiki-sync-custom@0ee8f657446f953f226ff3dca85071f03d0d9e1c
-  uses: LillyWho/ghaction-wiki-sync-custom@v1.0
-  with:
-    # The username of the repo owner
-    username: Sree2011
-    # The access token with Repo access. Can be passed in using `{{ secrets.GITHUB_TOKEN }}`.
-    access_token: '{{ secrets.GITHUB_TOKEN }}'
-    # The folder you want to sync the repo with
-    wiki_folder: wiki # optional, default is wiki
-    # A custom commit message to be used
-    commit_message: New wiki page added # optional, default is action: wiki sync
-    # The email address to use with the commit
-    commit_username: sreesainandinigundraju@gmail.com
-    # The email address to use when committing
-    commit_email: sreesainandinigundraju@gmail.com
-          
+name: Wiki to PDF
+
+on:
+  # Trigger the action manually or on a schedule
+  workflow_dispatch:
+  schedule:
+    - cron: '*/10 * * * * *' # Run every day at midnight
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Download wiki pages
+        run: |
+          git clone https://github.com/<your-username>/<your-repository>.wiki.git wiki
+      - name: Convert Markdown to PDF
+        run: |
+          for file in wiki/*.md; do
+            markdown2pdf "$file" > "${file%.md}.pdf"
+          done
+      - name: Combine PDFs
+        run: |
+          pdftk wiki/*.pdf cat output wiki.pdf
+      - name: Upload PDF to Releases
+        uses: actions/upload-artifact@v3
+        with:
+          name: wiki.pdf
+          path: wiki.pdf
