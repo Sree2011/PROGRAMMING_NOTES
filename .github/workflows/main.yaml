@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Download wiki pages
         run: |
-          git clone https://github.com/<your-username>/<your-repository>.wiki.git wiki
+          git clone https://github.com/Sree2011/PROGRAMMING_NOTES.wiki.git wiki
       - name: Convert Markdown to PDF
         run: |
           for file in wiki/*.md; do
