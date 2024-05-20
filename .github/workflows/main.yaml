@@ -4,7 +4,7 @@ on:
   # Trigger the action manually or on a schedule
   workflow_dispatch:
   schedule:
-    - cron: "*/1* * * * *" # Run every 1 minute
+    - cron: "*/15 * * * *" # Run every 1 minute
 
 jobs:
   build:
