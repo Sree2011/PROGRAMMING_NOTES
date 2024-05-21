@@ -12,6 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: GitHub Wiki Action
-        uses: Andrew-Chen-Wang/github-wiki-action@v4.4.0
+        uses: Sree2011/PROGRAMMING_NOTES/github-wiki-action@v4.4.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
