@@ -18,7 +18,7 @@ jobs:
         run: |
           pip install markdown2pdf
           for file in wiki/*.md; do
-            md2pdf "$file" > "${file%.md}.pdf"
+            md2pdf "$file"
           done
       - name: Combine PDFs
         run: |
