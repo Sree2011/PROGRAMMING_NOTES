@@ -16,8 +16,9 @@ jobs:
           git clone https://github.com/Sree2011/PROGRAMMING_NOTES.wiki.git wiki
       - name: Convert Markdown to PDF
         run: |
+          pip install markdown2pdf
           for file in wiki/*.md; do
-            markdown2pdf "$file" > "${file%.md}.pdf"
+            md2pdf "$file" > "${file%.md}.pdf"
           done
       - name: Combine PDFs
         run: |
