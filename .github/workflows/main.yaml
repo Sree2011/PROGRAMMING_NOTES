@@ -18,7 +18,7 @@ jobs:
         run: |
           sudo apt-get install pandoc texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra
           for file in wiki/*.md; do
-            pandoc {$file}.md -o {$file}.pdf
+            pandoc {$file} -o {$file}.pdf
           done
       - name: Combine PDFs
         run: |
