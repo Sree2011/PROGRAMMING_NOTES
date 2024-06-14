@@ -20,7 +20,7 @@ jobs:
 
       - name: Convert HTML to PDF
         run: |
-          wkhtmltopdf path/to/your/html/file.html output.pdf
+          wkhtmltopdf .\cheatsheets\Variables and data types\variables.html output.pdf
           # Adjust the input and output paths as needed
 
       - name: Upload PDF artifact
