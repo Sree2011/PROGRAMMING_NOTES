@@ -8,3 +8,7 @@ blockquote{
     
     justify-self: center;
 }
+
+p{
+    text-align: justify;
+}
