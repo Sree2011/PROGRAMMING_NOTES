@@ -1,4 +1,10 @@
 blockquote{
     background-color: cornsilk;
     color: crimson;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    padding: 5px;
+    
+    justify-self: center;
 }
