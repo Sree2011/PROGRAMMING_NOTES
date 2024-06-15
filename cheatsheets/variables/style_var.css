@@ -1,18 +1,5 @@
 blockquote{
     background-color: blanchedalmond;
     color: blue;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: oblique;
-    padding: 5px;
-    
-    justify-self: center;
 }
-
-table {
-    border-collapse: collapse; /* This collapses adjacent cell borders into a single border */
-  }
-  th, td {
-    border: 2px solid black;
-    padding: 3px 3px;
-  }
 
