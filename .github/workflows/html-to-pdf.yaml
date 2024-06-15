@@ -2,29 +2,26 @@ name: Convert HTML to PDF
 
 on:
   push:
-    paths:
-      - '.\cheatsheets\Variables and data types\variables.html' # Specify the path to your HTML file
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - uses: actions/checkout@v2
 
-      - name: Install wkhtmltopdf
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y wkhtmltopdf
+    - name: Install wkhtmltopdf
+      run: sudo apt-get install wkhtmltopdf
 
-      - name: Convert HTML to PDF
-        run: |
-          wkhtmltopdf .\cheatsheets\Variables and data types\variables.html output.pdf
-          # Adjust the input and output paths as needed
+    - name: Convert HTML to PDF
+      run: wkhtmltopdf ./cheatsheets/variables/my-cheatsheet.html ./cheatsheets/variables/my-cheatsheet.pdf
 
-      - name: Upload PDF artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: converted-pdf
-          path: output.pdf
+    - name: Commit PDF
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add ./cheatsheets/variables/my-cheatsheet.pdf
+        git commit -m "Add generated PDF"
+        git push
