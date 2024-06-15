@@ -1,2 +1,5 @@
 
-# This repo contains some coding snippets in c, java and python
+# This repo contains some cheatsheets for different concepts in C, Java and Python.
+
+1. [Variables](/cheatsheets/variables/variables.html)
+   
