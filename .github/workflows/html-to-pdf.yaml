@@ -16,7 +16,7 @@ jobs:
       run: sudo apt-get install wkhtmltopdf
 
     - name: Convert HTML to PDF
-      run: wkhtmltopdf ./cheatsheets/variables/my-cheatsheet.html ./cheatsheets/variables/my-cheatsheet.pdf
+      run: wkhtmltopdf ./cheatsheets/variables/variables.html ./cheatsheets/variables/variables.pdf
 
     - name: Commit PDF
       run: |
