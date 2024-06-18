@@ -86,59 +86,36 @@
         ```
       </md-block>
 
-      <b>Coding examples:</b>
-      <table>
-        <thead>
-            <th>Java</th>
-            <th>Python</th>
-        </thead>
+      <b>Coding examples:</b><br/>
+      <md-block>
+| Java | Python |
+| :---: | :---: |
+| ```java | ```python |
+| public class Vehicle{ | class Vehicle: |
+|     static String color; |     def __init__(self, color, speed, type): |
+|     static int speed; |         self.color = color |
+|     static String type; |         self.speed = speed |
+|  |         self.type = type |
+|     public Vehicle(String color, int speed, String type){ |  |
+|         this.color = color; |     def setColor(self, newColor): |
+|         this.speed = speed; |         self.color = newColor |
+|         this.type = type; |      |
+|     } |     def getColor(self): |
+|  |         return self.color |
+|     public static void setColor(String newColor){ | ``` |
+|         color = newColor; |  |
+|     } |  |
+|  |  |
+|     public static String getColor(){ |  |
+|         return color; |  |
+|     } |  |
+| } |  |
+| ``` | ``` |
 
-        <tbody>
-            <td>
-                <md-block>
-                    ```java
-                    public class Vehicle{
-                        static String color;
-                        static int speed;
-                        static String type;
+</md-block>
 
-                        public Vehicle(color,speed,type){
-                            this.color = color;
-                            this.speed = speed;
-                            this.type = type;
-                        }
 
-                        public static void setColor(String newColor){
-                            this.color = newColor;
-                        }
 
-                        public static String getColor(){
-                            return this.color;
-                        }
-                    }
-                </md-block>
-            </td>
-
-            <td align="start">
-                <md-block>
-                    ```python
-                    class Vehicle:
-                        def __init__(self,color,speed,type):
-                            self.color = color
-                            self.speed = speed
-                            self.type = type
-
-                        def setColor(newColor):
-                            self.color = newColor
-                        
-                        def getColor():
-                            return self.color
-
-                    ```
-                </md-block>
-            </td>
-        </tbody>
-      </table>
         
     </div>
   </body>
