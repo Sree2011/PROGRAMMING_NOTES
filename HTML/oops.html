@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Input and Output</title>
+    <title>Object Oriented Programming</title>
     <link rel="stylesheet" type="text/css" href="/CSS/style_inout.css">
     <link rel="stylesheet" type="text/css" href="/common/style.css">
     <script type="module" src="https://md-block.verou.me/md-block.js"></script>
@@ -55,9 +55,90 @@
         child object and latter is called parent object.
     </p>
 
+    <p>The C programming is a procedure-oriented language.
+        It does not support classes and objects.
+    </p>
+
     </div>
 
     <div style="flex: 1; padding: 10px;">
+      <h2>Class and object:</h2>
+      <b>Syntax:</b>
+      <md-block>
+        ```pseudocode
+        Define Class Vehicle
+            Define Properties:
+                color
+                speed
+                type
+
+        Define Constructor with parameters color, speed, type
+            Set color to color
+            Set speed to speed
+            Set type to type
+
+        Define Method to set color with parameter newColor
+            Set color to newColor
+
+        Define Method to get color
+            Return color
+
+        ```
+      </md-block>
+
+      <b>Coding examples:</b>
+      <table>
+        <thead>
+            <th>Java</th>
+            <th>Python</th>
+        </thead>
+
+        <tbody>
+            <td>
+                <md-block>
+                    ```java
+                    public class Vehicle{
+                        static String color;
+                        static int speed;
+                        static String type;
+
+                        public Vehicle(color,speed,type){
+                            this.color = color;
+                            this.speed = speed;
+                            this.type = type;
+                        }
+
+                        public static void setColor(String newColor){
+                            this.color = newColor;
+                        }
+
+                        public static String getColor(){
+                            return this.color;
+                        }
+                    }
+                </md-block>
+            </td>
+
+            <td>
+                <md-block>
+                    ```python
+                    class Vehicle:
+                        def __init__(self,color,speed,type):
+                            self.color = color
+                            self.speed = speed
+                            self.type = type
+
+                        def setColor(newColor):
+                            self.color = newColor
+                        
+                        def getColor():
+                            return self.color
+
+                    ```
+                </md-block>
+            </td>
+        </tbody>
+      </table>
         
     </div>
   </body>
