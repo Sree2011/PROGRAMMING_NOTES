@@ -19,7 +19,11 @@ table {
   }
 
 
-md-block{
-  background-color: gold;
-  color: red;
+.flexmain{
+  display: flex;
+}
+
+.flexsub{
+  display: flex;
+  flex: 1;
 }
