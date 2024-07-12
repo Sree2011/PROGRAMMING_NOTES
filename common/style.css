@@ -27,3 +27,17 @@ table {
   flex: 1;
   padding: 10px;
 }
+
+
+section {
+    display: flex;
+    flex-direction: row;
+}
+#definitions {
+    flex: 1;
+    /* Adjust styling for definitions section */
+}
+#examples {
+    flex: 1;
+    /* Adjust styling for examples section */
+}
